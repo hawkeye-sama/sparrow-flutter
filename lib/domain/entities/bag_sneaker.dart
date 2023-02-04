@@ -1,4 +1,4 @@
-import 'package:sneakers/core/utils/double.dart';
+import 'package:sparrow/core/utils/double.dart';
 
 class BagSneaker {
   BagSneaker({

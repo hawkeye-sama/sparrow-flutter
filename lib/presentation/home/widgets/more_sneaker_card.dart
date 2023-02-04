@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sneakers/domain/entities/sneaker.dart';
-import 'package:sneakers/presentation/sneaker_details/sneaker_details_page.dart';
+import 'package:sparrow/domain/entities/sneaker.dart';
+import 'package:sparrow/presentation/sneaker_details/sneaker_details_page.dart';
 
 class MoreSneakerCard extends StatelessWidget {
   const MoreSneakerCard({

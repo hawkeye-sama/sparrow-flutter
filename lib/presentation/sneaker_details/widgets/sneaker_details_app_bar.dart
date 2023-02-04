@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sneakers/domain/entities/sneaker.dart';
-import 'package:sneakers/presentation/widgets/hero_color.dart';
-import 'package:sneakers/presentation/widgets/hero_image.dart';
+import 'package:sparrow/domain/entities/sneaker.dart';
+import 'package:sparrow/presentation/widgets/hero_color.dart';
+import 'package:sparrow/presentation/widgets/hero_image.dart';
 
 class SneakerDetailsAppBar extends StatelessWidget {
   const SneakerDetailsAppBar({required this.sneaker, super.key});

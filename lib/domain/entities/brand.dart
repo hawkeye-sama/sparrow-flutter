@@ -1,4 +1,4 @@
-import 'package:sneakers/domain/entities/sneaker.dart';
+import 'package:sparrow/domain/entities/sneaker.dart';
 
 class Brand {
   const Brand({

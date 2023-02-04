@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:sneakers/domain/entities/bag_sneaker.dart';
-import 'package:sneakers/presentation/bag/cubit/bag_cubit.dart';
-import 'package:sneakers/presentation/bag/widgets/bag_list.dart';
-import 'package:sneakers/presentation/main/navigation_page.dart';
-import 'package:sneakers/presentation/widgets/primary_button.dart';
-import 'package:sneakers/presentation/widgets/sneaker_app_bar.dart';
+import 'package:sparrow/domain/entities/bag_sneaker.dart';
+import 'package:sparrow/presentation/bag/cubit/bag_cubit.dart';
+import 'package:sparrow/presentation/bag/widgets/bag_list.dart';
+import 'package:sparrow/presentation/main/navigation_page.dart';
+import 'package:sparrow/presentation/widgets/primary_button.dart';
+import 'package:sparrow/presentation/widgets/sneaker_app_bar.dart';
 
 class BagPage extends NavigationPage {
   const BagPage({super.key}) : super(icon: Icons.shopping_cart_outlined);

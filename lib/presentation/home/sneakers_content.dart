@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:sneakers/domain/entities/brand.dart';
-import 'package:sneakers/domain/entities/sneaker.dart';
-import 'package:sneakers/presentation/home/cubit/sneaker_type_cubit.dart';
-import 'package:sneakers/presentation/home/widgets/sneakers_view.dart';
+import 'package:sparrow/domain/entities/brand.dart';
+import 'package:sparrow/domain/entities/sneaker.dart';
+import 'package:sparrow/presentation/home/cubit/sneaker_type_cubit.dart';
+import 'package:sparrow/presentation/home/widgets/sneakers_view.dart';
 
 class SneakersContent extends StatelessWidget {
   const SneakersContent({

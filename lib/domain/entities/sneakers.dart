@@ -1,5 +1,5 @@
-import 'package:sneakers/domain/entities/brand.dart';
-import 'package:sneakers/domain/entities/sneaker.dart';
+import 'package:sparrow/domain/entities/brand.dart';
+import 'package:sparrow/domain/entities/sneaker.dart';
 
 class Sneakers {
   const Sneakers({

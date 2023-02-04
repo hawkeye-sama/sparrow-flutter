@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sneakers/presentation/widgets/underlined_text.dart';
+import 'package:sparrow/presentation/widgets/underlined_text.dart';
 
 class DescriptionComponent extends StatelessWidget {
   const DescriptionComponent({

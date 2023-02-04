@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:sneakers/core/routes/fade_page_route.dart';
-import 'package:sneakers/domain/entities/sneaker.dart';
-import 'package:sneakers/presentation/bag/bag_page.dart';
-import 'package:sneakers/presentation/main/main_page.dart';
-import 'package:sneakers/presentation/sneaker_details/sneaker_details_page.dart';
+import 'package:sparrow/core/routes/fade_page_route.dart';
+import 'package:sparrow/domain/entities/sneaker.dart';
+import 'package:sparrow/presentation/bag/bag_page.dart';
+import 'package:sparrow/presentation/main/main_page.dart';
+import 'package:sparrow/presentation/sneaker_details/sneaker_details_page.dart';
 
 class Routes {
   static Route<dynamic>? onGenerate(RouteSettings settings) {

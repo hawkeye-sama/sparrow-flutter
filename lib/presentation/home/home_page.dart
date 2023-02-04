@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:sneakers/domain/mock_sneakers.dart';
-import 'package:sneakers/presentation/home/cubit/brand_cubit.dart';
-import 'package:sneakers/presentation/home/more_content.dart';
-import 'package:sneakers/presentation/home/sneakers_content.dart';
-import 'package:sneakers/presentation/main/navigation_page.dart';
+import 'package:sparrow/domain/mock_sneakers.dart';
+import 'package:sparrow/presentation/home/cubit/brand_cubit.dart';
+import 'package:sparrow/presentation/home/more_content.dart';
+import 'package:sparrow/presentation/home/sneakers_content.dart';
+import 'package:sparrow/presentation/main/navigation_page.dart';
 
 class HomePage extends NavigationPage {
   const HomePage({super.key}) : super(icon: Icons.home_outlined);

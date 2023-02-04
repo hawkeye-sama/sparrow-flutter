@@ -1,4 +1,4 @@
-package com.example.sneakers
+package com.example.sparrow
 
 import io.flutter.embedding.android.FlutterActivity
 

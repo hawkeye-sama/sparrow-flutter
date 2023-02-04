@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:sneakers/core/routes/routes.dart';
-import 'package:sneakers/core/theme/custom_theme_data.dart';
-import 'package:sneakers/presentation/bag/cubit/bag_cubit.dart';
-import 'package:sneakers/presentation/home/cubit/brand_cubit.dart';
-import 'package:sneakers/presentation/home/cubit/sneaker_type_cubit.dart';
-import 'package:sneakers/presentation/main/cubit/page_cubit.dart';
+import 'package:sparrow/core/routes/routes.dart';
+import 'package:sparrow/core/theme/custom_theme_data.dart';
+import 'package:sparrow/presentation/bag/cubit/bag_cubit.dart';
+import 'package:sparrow/presentation/home/cubit/brand_cubit.dart';
+import 'package:sparrow/presentation/home/cubit/sneaker_type_cubit.dart';
+import 'package:sparrow/presentation/main/cubit/page_cubit.dart';
 
 class Application extends StatelessWidget {
   const Application({super.key});

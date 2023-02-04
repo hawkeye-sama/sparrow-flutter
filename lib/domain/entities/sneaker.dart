@@ -1,8 +1,8 @@
 import 'dart:ui';
 
-import 'package:sneakers/core/theme/colors.dart';
-import 'package:sneakers/core/utils/double.dart';
-import 'package:sneakers/domain/entities/asset.dart';
+import 'package:sparrow/core/theme/colors.dart';
+import 'package:sparrow/core/utils/double.dart';
+import 'package:sparrow/domain/entities/asset.dart';
 
 class Sneaker {
   const Sneaker({

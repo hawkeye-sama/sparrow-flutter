@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:sneakers/presentation/main/cubit/page_cubit.dart';
+import 'package:sparrow/presentation/main/cubit/page_cubit.dart';
 
-import 'package:sneakers/presentation/bag/bag_page.dart';
-import 'package:sneakers/presentation/favorites/favorites_page.dart';
-import 'package:sneakers/presentation/home/home_page.dart';
-import 'package:sneakers/presentation/map/map_page.dart';
-import 'package:sneakers/presentation/profile/profile_page.dart';
-import 'package:sneakers/presentation/widgets/sneaker_app_bar.dart';
-import 'package:sneakers/presentation/widgets/square_icon_button.dart';
+import 'package:sparrow/presentation/bag/bag_page.dart';
+import 'package:sparrow/presentation/favorites/favorites_page.dart';
+import 'package:sparrow/presentation/home/home_page.dart';
+import 'package:sparrow/presentation/map/map_page.dart';
+import 'package:sparrow/presentation/profile/profile_page.dart';
+import 'package:sparrow/presentation/widgets/sneaker_app_bar.dart';
+import 'package:sparrow/presentation/widgets/square_icon_button.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({super.key});

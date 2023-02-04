@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sneakers/application.dart';
+import 'package:sparrow/application.dart';
 
 void main() {
   runApp(const Application());

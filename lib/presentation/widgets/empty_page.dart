@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sneakers/presentation/main/navigation_page.dart';
+import 'package:sparrow/presentation/main/navigation_page.dart';
 
 class EmptyPage extends NavigationPage {
   const EmptyPage({

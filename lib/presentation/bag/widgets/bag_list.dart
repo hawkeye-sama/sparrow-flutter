@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:sneakers/domain/entities/bag_sneaker.dart';
-import 'package:sneakers/presentation/bag/cubit/bag_cubit.dart';
-import 'package:sneakers/presentation/bag/widgets/bag_sneaker_card.dart';
-import 'package:sneakers/presentation/widgets/empty_page.dart';
+import 'package:sparrow/domain/entities/bag_sneaker.dart';
+import 'package:sparrow/presentation/bag/cubit/bag_cubit.dart';
+import 'package:sparrow/presentation/bag/widgets/bag_sneaker_card.dart';
+import 'package:sparrow/presentation/widgets/empty_page.dart';
 // ignore: depend_on_referenced_packages
 import 'package:collection/collection.dart';
 

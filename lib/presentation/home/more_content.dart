@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sneakers/domain/entities/sneaker.dart';
-import 'package:sneakers/presentation/home/widgets/more_sneaker_card.dart';
-import 'package:sneakers/presentation/widgets/large_title.dart';
+import 'package:sparrow/domain/entities/sneaker.dart';
+import 'package:sparrow/presentation/home/widgets/more_sneaker_card.dart';
+import 'package:sparrow/presentation/widgets/large_title.dart';
 
 class MoreContent extends StatelessWidget {
   const MoreContent({required this.sneakers, super.key});

@@ -1,12 +1,12 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:sneakers/domain/entities/sneaker.dart';
-import 'package:sneakers/presentation/sneaker_details/sneaker_details_page.dart';
-import 'package:sneakers/presentation/widgets/dynamic_ink_well.dart';
-import 'package:sneakers/presentation/widgets/hero_color.dart';
-import 'package:sneakers/presentation/widgets/hero_image.dart';
-import 'package:sneakers/presentation/widgets/large_title.dart';
+import 'package:sparrow/domain/entities/sneaker.dart';
+import 'package:sparrow/presentation/sneaker_details/sneaker_details_page.dart';
+import 'package:sparrow/presentation/widgets/dynamic_ink_well.dart';
+import 'package:sparrow/presentation/widgets/hero_color.dart';
+import 'package:sparrow/presentation/widgets/hero_image.dart';
+import 'package:sparrow/presentation/widgets/large_title.dart';
 
 class SneakerCard extends StatelessWidget {
   const SneakerCard({

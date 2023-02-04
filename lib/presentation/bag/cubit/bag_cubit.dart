@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:sneakers/domain/entities/bag_sneaker.dart';
-import 'package:sneakers/domain/entities/sneaker.dart';
+import 'package:sparrow/domain/entities/bag_sneaker.dart';
+import 'package:sparrow/domain/entities/sneaker.dart';
 // ignore: depend_on_referenced_packages
 import 'package:collection/collection.dart';
 

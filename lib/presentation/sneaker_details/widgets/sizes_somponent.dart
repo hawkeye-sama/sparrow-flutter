@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:sneakers/core/utils/double.dart';
-import 'package:sneakers/presentation/widgets/large_title.dart';
+import 'package:sparrow/core/utils/double.dart';
+import 'package:sparrow/presentation/widgets/large_title.dart';
 
 class SizesComponent extends StatefulWidget {
   const SizesComponent({required this.sizes, super.key});

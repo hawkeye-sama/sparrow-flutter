@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:sneakers/core/images/images.dart';
-import 'package:sneakers/domain/entities/asset.dart';
-import 'package:sneakers/domain/entities/brand.dart';
-import 'package:sneakers/domain/entities/sneaker.dart';
-import 'package:sneakers/domain/entities/sneakers.dart';
+import 'package:sparrow/core/images/images.dart';
+import 'package:sparrow/domain/entities/asset.dart';
+import 'package:sparrow/domain/entities/brand.dart';
+import 'package:sparrow/domain/entities/sneaker.dart';
+import 'package:sparrow/domain/entities/sneakers.dart';
 
 const mockSneakers = Sneakers(
   brands: [

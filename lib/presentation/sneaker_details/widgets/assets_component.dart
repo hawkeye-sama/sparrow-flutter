@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sneakers/domain/entities/asset.dart';
+import 'package:sparrow/domain/entities/asset.dart';
 
 class AssetsComponent extends StatelessWidget {
   const AssetsComponent({

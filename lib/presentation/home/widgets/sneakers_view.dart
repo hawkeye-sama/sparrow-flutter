@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sneakers/domain/entities/sneaker.dart';
-import 'package:sneakers/presentation/home/widgets/sneaker_card.dart';
-import 'package:sneakers/presentation/widgets/transparent_pointer.dart';
+import 'package:sparrow/domain/entities/sneaker.dart';
+import 'package:sparrow/presentation/home/widgets/sneaker_card.dart';
+import 'package:sparrow/presentation/widgets/transparent_pointer.dart';
 
 class SneakersView extends StatefulWidget {
   const SneakersView({required this.sneakers, super.key});

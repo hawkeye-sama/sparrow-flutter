@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sneakers/domain/entities/bag_sneaker.dart';
-import 'package:sneakers/presentation/widgets/large_title.dart';
-import 'package:sneakers/presentation/widgets/square_icon_button.dart';
+import 'package:sparrow/domain/entities/bag_sneaker.dart';
+import 'package:sparrow/presentation/widgets/large_title.dart';
+import 'package:sparrow/presentation/widgets/square_icon_button.dart';
 
 class BagSneakerCard extends StatelessWidget {
   const BagSneakerCard({
