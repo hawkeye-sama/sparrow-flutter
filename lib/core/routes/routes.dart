@@ -5,25 +5,22 @@ import 'package:sparrow/presentation/authentication/login_page.dart';
 import 'package:sparrow/presentation/authentication/signup_page.dart';
 import 'package:sparrow/presentation/bag/bag_page.dart';
 import 'package:sparrow/presentation/main/main_page.dart';
+import 'package:sparrow/presentation/profile/profile_page.dart';
 import 'package:sparrow/presentation/sneaker_details/sneaker_details_page.dart';
 
 class Routes {
   static Route<dynamic>? onGenerate(RouteSettings settings) {
     switch (settings.name) {
       case MainPage.routeName:
-        return MaterialPageRoute(
-          builder: (context) => const MainPage(),
-        );
+        return MaterialPageRoute(builder: (context) => const MainPage());
       case BagPage.routeName:
-        return MaterialPageRoute(
-          builder: (context) => const BagPage(),
-        );
+        return MaterialPageRoute(builder: (context) => const BagPage());
       case LoginPage.routeName:
-        return MaterialPageRoute(
-          builder: (context) => const LoginPage(),
-        );
+        return MaterialPageRoute(builder: (context) => const LoginPage());
       case SignUpPage.routeName:
         return MaterialPageRoute(builder: (context) => const SignUpPage());
+      case ProfilePage.routeName:
+        return MaterialPageRoute(builder: (context) => const ProfilePage());
       case SneakerDetailsPage.routeName:
         return FadePageRoute(
           builder: (context) {
@@ -32,9 +29,7 @@ class Routes {
           },
         );
       default:
-        return MaterialPageRoute(
-          builder: (context) => const Scaffold(),
-        );
+        return MaterialPageRoute(builder: (context) => const Scaffold());
     }
   }
 }

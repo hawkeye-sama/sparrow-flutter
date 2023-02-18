@@ -20,7 +20,7 @@ class MainPage extends StatelessWidget {
     const FavoritesPage(),
     const MapPage(),
     // const BagPage(),
-    ProfilePage(),
+    const ProfilePage(),
   ];
 
   @override
