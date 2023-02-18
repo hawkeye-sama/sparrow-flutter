@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sparrow/core/routes/fade_page_route.dart';
 import 'package:sparrow/domain/entities/sneaker.dart';
+import 'package:sparrow/presentation/authentication/login_page.dart';
+import 'package:sparrow/presentation/authentication/signup_page.dart';
 import 'package:sparrow/presentation/bag/bag_page.dart';
 import 'package:sparrow/presentation/main/main_page.dart';
 import 'package:sparrow/presentation/sneaker_details/sneaker_details_page.dart';
@@ -16,6 +18,12 @@ class Routes {
         return MaterialPageRoute(
           builder: (context) => const BagPage(),
         );
+      case LoginPage.routeName:
+        return MaterialPageRoute(
+          builder: (context) => const LoginPage(),
+        );
+      case SignUpPage.routeName:
+        return MaterialPageRoute(builder: (context) => const SignUpPage());
       case SneakerDetailsPage.routeName:
         return FadePageRoute(
           builder: (context) {

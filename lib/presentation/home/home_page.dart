@@ -7,7 +7,8 @@ import 'package:sparrow/presentation/home/sneakers_content.dart';
 import 'package:sparrow/presentation/main/navigation_page.dart';
 
 class HomePage extends NavigationPage {
-  const HomePage({super.key}) : super(icon: Icons.home_outlined);
+  const HomePage({super.key})
+      : super(icon: Icons.home_outlined, title: 'Discover');
 
   static const routeName = '/home';
 

@@ -15,11 +15,11 @@ class MainPage extends StatelessWidget {
 
   static const routeName = '/';
 
-  static const pages = [
-    HomePage(),
-    FavoritesPage(),
-    MapPage(),
-    BagPage(),
+  static final pages = [
+    const HomePage(),
+    const FavoritesPage(),
+    const MapPage(),
+    // const BagPage(),
     ProfilePage(),
   ];
 
@@ -28,9 +28,9 @@ class MainPage extends StatelessWidget {
     return BlocBuilder<PageCubit, int>(
       builder: (context, state) {
         return Scaffold(
-          appBar: const SneakerAppBar(
-            subtitle: 'Discover',
-            subactions: [
+          appBar: SneakerAppBar(
+            subtitle: pages[state].title,
+            subactions: const [
               SquareIconButton(
                 iconSize: 30,
                 icon: Icons.search,

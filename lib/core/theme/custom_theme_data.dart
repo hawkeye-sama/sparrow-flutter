@@ -8,7 +8,7 @@ class CustomThemeData {
     primaryTextTheme: ThemeData.light().textTheme.apply(
           fontFamily: 'JosefinSans',
         ),
-    primaryColor: Colors.pink,
+    primaryColor: Colors.purple,
     appBarTheme: const AppBarTheme(
       titleTextStyle: TextStyle(
         fontSize: 36,
@@ -28,7 +28,7 @@ class CustomThemeData {
       type: BottomNavigationBarType.fixed,
       selectedIconTheme: IconThemeData(
         size: 30,
-        color: Colors.pink,
+        color: Colors.purple,
       ),
       unselectedIconTheme: IconThemeData(
         size: 30,
@@ -37,7 +37,7 @@ class CustomThemeData {
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        backgroundColor: Colors.pink,
+        backgroundColor: Colors.purple,
         foregroundColor: Colors.white,
         minimumSize: const Size.fromHeight(48),
       ),
