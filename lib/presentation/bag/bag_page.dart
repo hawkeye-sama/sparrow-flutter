@@ -8,7 +8,8 @@ import 'package:sparrow/presentation/widgets/primary_button.dart';
 import 'package:sparrow/presentation/widgets/sneaker_app_bar.dart';
 
 class BagPage extends NavigationPage {
-  const BagPage({super.key}) : super(icon: Icons.shopping_cart_outlined);
+  const BagPage({super.key})
+      : super(icon: Icons.shopping_cart_outlined, title: "Bag");
 
   static const routeName = '/bag';
 
