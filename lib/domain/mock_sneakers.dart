@@ -10,6 +10,7 @@ const mockSneakers = Sneakers(
     Brand(
       id: 1,
       name: 'Nike',
+      logo: 'https://img.freepik.com/free-icon/nike_318-565950.jpg',
       featured: [
         Sneaker(
           id: 1,
@@ -79,10 +80,14 @@ const mockSneakers = Sneakers(
     Brand(
       id: 2,
       name: 'Adidas',
+      logo:
+          'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Adidas_Logo.svg/1280px-Adidas_Logo.svg.png',
     ),
     Brand(
       id: 3,
       name: 'Jordan',
+      logo:
+          'https://upload.wikimedia.org/wikipedia/en/thumb/3/37/Jumpman_logo.svg/640px-Jumpman_logo.svg.png',
     ),
     Brand(
       id: 4,

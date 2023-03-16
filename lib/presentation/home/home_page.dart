@@ -4,7 +4,9 @@ import 'package:sparrow/domain/mock_sneakers.dart';
 import 'package:sparrow/presentation/home/cubit/brand_cubit.dart';
 import 'package:sparrow/presentation/home/more_content.dart';
 import 'package:sparrow/presentation/home/sneakers_content.dart';
+import 'package:sparrow/presentation/home/widgets/custom_tab_bar.dart';
 import 'package:sparrow/presentation/main/navigation_page.dart';
+import 'package:sparrow/presentation/widgets/large_title.dart';
 
 class HomePage extends NavigationPage {
   const HomePage({super.key})
@@ -16,42 +18,24 @@ class HomePage extends NavigationPage {
   Widget build(BuildContext context) {
     return BlocBuilder<BrandCubit, int>(
       builder: (context, activeBrandIndex) {
-        return DefaultTabController(
-          length: mockSneakers.brands.length,
-          child: ListView(
-            children: [
-              TabBar(
-                padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
-                isScrollable: true,
-                onTap: context.read<BrandCubit>().updateIndex,
-                indicatorColor: Colors.transparent,
-                tabs: [
-                  for (var i = 0; i < mockSneakers.brands.length; i++)
-                    Tab(
-                      child: Text(
-                        mockSneakers.brands[i].name,
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w600,
-                          color: i == activeBrandIndex
-                              ? Colors.black
-                              : Colors.grey[400],
-                        ),
-                      ),
-                    ),
-                ],
+        return ListView(
+          children: [
+            const SizedBox(height: 15),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 16),
+              child: LargeTitle('Brands'),
+            ),
+            const CustomTabBar(),
+            SizedBox(
+              height: 350,
+              child: SneakersContent(
+                brand: mockSneakers.brands[activeBrandIndex],
               ),
-              SizedBox(
-                height: 350,
-                child: SneakersContent(
-                  brand: mockSneakers.brands[activeBrandIndex],
-                ),
-              ),
-              MoreContent(
-                sneakers: mockSneakers.more,
-              ),
-            ],
-          ),
+            ),
+            MoreContent(
+              sneakers: mockSneakers.more,
+            ),
+          ],
         );
       },
     );

@@ -4,6 +4,7 @@ class Brand {
   const Brand({
     required this.id,
     required this.name,
+    this.logo,
     this.upcoming = const [],
     this.featured = const [],
     this.newModels = const [],
@@ -11,6 +12,7 @@ class Brand {
 
   final int id;
   final String name;
+  final String? logo;
   final List<Sneaker> upcoming;
   final List<Sneaker> featured;
   final List<Sneaker> newModels;
