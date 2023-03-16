@@ -11,14 +11,13 @@ const mockSneakers = Sneakers(
       id: 1,
       name: 'Nike',
       logo: 'https://img.freepik.com/free-icon/nike_318-565950.jpg',
-      featured: [
+      samples: [
         Sneaker(
           id: 1,
           shortName: 'Air-Zoom',
           name: 'Air-Zoom-20',
           brandName: 'Nike',
           price: 130,
-          type: SneakerType.featured,
           color: Colors.purple,
           assets: [
             Asset(
@@ -48,7 +47,6 @@ const mockSneakers = Sneakers(
           name: 'Air-Max-200',
           brandName: 'Nike',
           price: 170,
-          type: SneakerType.featured,
           color: Colors.redAccent,
           assets: [
             Asset(
@@ -74,14 +72,72 @@ const mockSneakers = Sneakers(
         ),
         ..._moreMockSneakers,
       ],
-      upcoming: [],
-      newModels: [],
     ),
     Brand(
       id: 2,
       name: 'Adidas',
       logo:
           'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Adidas_Logo.svg/1280px-Adidas_Logo.svg.png',
+      samples: [
+        Sneaker(
+          id: 1,
+          shortName: 'Jord',
+          name: 'Air-Jord-20',
+          brandName: 'Adidas',
+          price: 130,
+          color: Colors.pink,
+          assets: [
+            Asset(
+              type: AssetType.picture,
+              path: Images.sneaker4,
+            ),
+            Asset(
+              type: AssetType.picture,
+              path: Images.sneaker2,
+            ),
+            Asset(
+              type: AssetType.picture,
+              path: Images.sneaker1,
+            ),
+            Asset(
+              type: AssetType.video,
+              path: Images.sneaker3,
+            ),
+          ],
+          description:
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+          sizes: [7.5, 8, 9.5, 10, 12],
+        ),
+        Sneaker(
+          id: 2,
+          shortName: 'Yeezy',
+          name: 'Max-200',
+          brandName: 'Adidas',
+          price: 170,
+          color: Colors.blue,
+          assets: [
+            Asset(
+              type: AssetType.picture,
+              path: Images.sneaker3,
+            ),
+            Asset(
+              type: AssetType.picture,
+              path: Images.sneaker2,
+            ),
+            Asset(
+              type: AssetType.picture,
+              path: Images.sneaker1,
+            ),
+            Asset(
+              type: AssetType.video,
+              path: Images.sneaker4,
+            ),
+          ],
+          description:
+              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+          sizes: [7.5, 8, 9.5, 10, 12],
+        ),
+      ],
     ),
     Brand(
       id: 3,
@@ -108,7 +164,6 @@ const _moreMockSneakers = [
     name: 'Air-Force-100',
     brandName: 'Nike',
     price: 230,
-    type: SneakerType.featured,
     color: Colors.lightBlue,
     assets: [
       Asset(
@@ -138,7 +193,6 @@ const _moreMockSneakers = [
     name: 'Blazers-30',
     brandName: 'Nike',
     price: 165,
-    type: SneakerType.featured,
     color: Colors.green,
     assets: [
       Asset(

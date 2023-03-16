@@ -13,11 +13,20 @@ class SneakersView extends StatefulWidget {
 }
 
 class _SneakersViewState extends State<SneakersView> {
-  final PageController _pageController = PageController(viewportFraction: 0.7);
+  final PageController _pageController = PageController(viewportFraction: 1);
 
-  var _currentIndex = 0;
+  int _currentIndex = 0;
 
   int get _sneakersLength => widget.sneakers.length;
+
+  @override
+  void didUpdateWidget(SneakersView oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (widget.sneakers != oldWidget.sneakers) {
+      _currentIndex = 0;
+      _pageController.jumpToPage(0);
+    }
+  }
 
   @override
   void dispose() {
@@ -29,11 +38,12 @@ class _SneakersViewState extends State<SneakersView> {
   Widget build(BuildContext context) {
     return TransparentPointer(
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 16),
+        padding: const EdgeInsets.symmetric(vertical: 30),
         child: PageView.builder(
           controller: _pageController,
           scrollDirection: Axis.horizontal,
           physics: const BouncingScrollPhysics(),
+          itemCount: _sneakersLength,
           onPageChanged: (index) {
             setState(() {
               _currentIndex = index % _sneakersLength;
@@ -65,9 +75,7 @@ class _SneakersViewState extends State<SneakersView> {
                 return AnimatedPadding(
                   duration: const Duration(milliseconds: 300),
                   curve: Curves.ease,
-                  padding: EdgeInsets.all(
-                    _currentIndex < sneakersIndex ? 8 : 0,
-                  ),
+                  padding: const EdgeInsets.only(left: 10),
                   child: SneakerCard(
                     sneaker: sneaker,
                     size: size,

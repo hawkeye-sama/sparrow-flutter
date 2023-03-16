@@ -99,7 +99,7 @@ class SneakerCard extends StatelessWidget {
           ),
         ),
         Positioned(
-          right: size * 200,
+          right: size * 200 + 70,
           top: 32,
           bottom: 32,
           child: DynamicInkWell(
@@ -113,7 +113,7 @@ class SneakerCard extends StatelessWidget {
             child: (tappedDown) => HeroImage(
               tag: '${sneaker.id}image',
               child: AnimatedScale(
-                scale: tappedDown ? 0.8 : 1.0,
+                scale: tappedDown ? 1.2 : 1.4,
                 duration: const Duration(milliseconds: 100),
                 child: Image.asset(
                   sneaker.image,

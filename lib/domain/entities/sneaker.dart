@@ -12,7 +12,6 @@ class Sneaker {
     required this.brandName,
     required this.price,
     required this.assets,
-    required this.type,
     required this.color,
     required this.description,
     required this.sizes,
@@ -24,7 +23,6 @@ class Sneaker {
   final String brandName;
   final double price;
   final List<Asset> assets;
-  final SneakerType type;
   final Color color;
   final String description;
   final List<double> sizes;
@@ -34,26 +32,4 @@ class Sneaker {
   String get image => assets[0].path;
 
   Color get estimatedColor => color.estimate();
-}
-
-enum SneakerType {
-  upcoming,
-  featured,
-  newModel,
-  other,
-}
-
-extension SneakerTypeExt on SneakerType {
-  String get name {
-    switch (this) {
-      case SneakerType.upcoming:
-        return 'Upcoming';
-      case SneakerType.featured:
-        return 'Featured';
-      case SneakerType.newModel:
-        return 'New';
-      default:
-        return 'other';
-    }
-  }
 }

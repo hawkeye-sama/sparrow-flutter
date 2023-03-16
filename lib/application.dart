@@ -5,7 +5,6 @@ import 'package:sparrow/core/theme/custom_theme_data.dart';
 import 'package:sparrow/presentation/authentication/cubits/auth_cubit.dart';
 import 'package:sparrow/presentation/bag/cubit/bag_cubit.dart';
 import 'package:sparrow/presentation/home/cubit/brand_cubit.dart';
-import 'package:sparrow/presentation/home/cubit/sneaker_type_cubit.dart';
 import 'package:sparrow/presentation/authentication/login_page.dart';
 import 'package:sparrow/presentation/main/cubit/page_cubit.dart';
 import 'package:sparrow/presentation/main/main_page.dart';
@@ -22,9 +21,6 @@ class Application extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => BrandCubit(),
-        ),
-        BlocProvider(
-          create: (context) => SneakerTypeCubit(),
         ),
         BlocProvider(
           create: (context) => BagCubit(),

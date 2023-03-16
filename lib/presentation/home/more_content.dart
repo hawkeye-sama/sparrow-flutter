@@ -18,7 +18,7 @@ class MoreContent extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const LargeTitle('More'),
+              const LargeTitle('For You'),
               IconButton(
                 onPressed: () {},
                 icon: const Icon(
