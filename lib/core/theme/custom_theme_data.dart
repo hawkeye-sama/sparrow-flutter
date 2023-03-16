@@ -8,7 +8,6 @@ class CustomThemeData {
     primaryTextTheme: ThemeData.light().textTheme.apply(
           fontFamily: 'JosefinSans',
         ),
-    splashColor: Colors.purple,
     primaryColor: Colors.purple,
     appBarTheme: const AppBarTheme(
       titleTextStyle: TextStyle(
