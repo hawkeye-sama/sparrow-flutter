@@ -77,24 +77,26 @@ class MoreSneakerCard extends StatelessWidget {
                 ),
               ),
             ),
-            Positioned(
-              left: 10,
-              child: Container(
-                height: 88,
-                width: 24,
-                color: Colors.pink,
-                alignment: Alignment.center,
-                child: const RotatedBox(
-                  quarterTurns: -1,
-                  child: Text(
-                    'NEW',
-                    style: TextStyle(
-                      color: Colors.white,
+            // TODO - add multiple tags like NEW, POPULAR, SALE etc and set colors according based on sneaker data
+            if (sneaker.tagValue != null)
+              Positioned(
+                left: 10,
+                child: Container(
+                  height: 88,
+                  width: 24,
+                  color: sneaker.tagColor,
+                  alignment: Alignment.center,
+                  child: RotatedBox(
+                    quarterTurns: -1,
+                    child: Text(
+                      sneaker.tagValue!,
+                      style: const TextStyle(
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 ),
-              ),
-            )
+              )
           ],
         ),
       ),

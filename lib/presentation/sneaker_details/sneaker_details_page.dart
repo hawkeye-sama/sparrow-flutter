@@ -22,7 +22,7 @@ class SneakerDetailsPage extends StatefulWidget {
 
 class _SneakerDetailsPageState extends State<SneakerDetailsPage> {
   bool _visible = false;
-  static const _duration = Duration(milliseconds: 300);
+  static const _duration = Duration(milliseconds: 200);
 
   @override
   void initState() {
@@ -113,7 +113,7 @@ class _AnimatedVisibility extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedPadding(
-      padding: EdgeInsets.only(top: visible ? 0 : 50),
+      padding: EdgeInsets.only(top: visible ? 0 : 20),
       duration: duration,
       child: AnimatedOpacity(
         opacity: visible ? 1 : 0,

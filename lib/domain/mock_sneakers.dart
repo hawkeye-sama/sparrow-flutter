@@ -70,7 +70,6 @@ const mockSneakers = Sneakers(
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
           sizes: [7.5, 8, 9.5, 10, 12],
         ),
-        ..._moreMockSneakers,
       ],
     ),
     Brand(
@@ -159,10 +158,71 @@ const mockSneakers = Sneakers(
 
 const _moreMockSneakers = [
   Sneaker(
-    id: 3,
+    id: 7,
     shortName: 'Air-Force',
     name: 'Air-Force-100',
     brandName: 'Nike',
+    price: 230,
+    color: Colors.lightBlue,
+    assets: [
+      Asset(
+        type: AssetType.picture,
+        path: Images.sneaker1,
+      ),
+      Asset(
+        type: AssetType.picture,
+        path: Images.sneaker2,
+      ),
+      Asset(
+        type: AssetType.picture,
+        path: Images.sneaker1,
+      ),
+      Asset(
+        type: AssetType.video,
+        path: Images.sneaker4,
+      ),
+    ],
+    tag: SneakerTag.newSneaker,
+    description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    sizes: [7.5, 8, 9.5, 10, 12],
+  ),
+  Sneaker(
+    id: 8,
+    shortName: 'Blazers',
+    name: 'Blazers-30',
+    brandName: 'Nike',
+    tag: SneakerTag.popular,
+    price: 165,
+    color: Colors.green,
+    assets: [
+      Asset(
+        type: AssetType.picture,
+        path: Images.sneaker4,
+      ),
+      Asset(
+        type: AssetType.picture,
+        path: Images.sneaker2,
+      ),
+      Asset(
+        type: AssetType.picture,
+        path: Images.sneaker3,
+      ),
+      Asset(
+        type: AssetType.video,
+        path: Images.sneaker1,
+      ),
+    ],
+    description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    sizes: [7.5, 8, 9.5, 10, 12],
+  ),
+  Sneaker(
+    id: 9,
+    shortName: 'Air-Force',
+    name: 'Air-Force-100',
+    brandName: 'Nike',
+    tag: SneakerTag.popular,
     price: 230,
     color: Colors.lightBlue,
     assets: [
@@ -188,7 +248,66 @@ const _moreMockSneakers = [
     sizes: [7.5, 8, 9.5, 10, 12],
   ),
   Sneaker(
-    id: 4,
+    id: 10,
+    shortName: 'Blazers',
+    name: 'Blazers-30',
+    brandName: 'Nike',
+    tag: SneakerTag.sale,
+    price: 165,
+    color: Colors.green,
+    assets: [
+      Asset(
+        type: AssetType.picture,
+        path: Images.sneaker2,
+      ),
+      Asset(
+        type: AssetType.picture,
+        path: Images.sneaker2,
+      ),
+      Asset(
+        type: AssetType.picture,
+        path: Images.sneaker3,
+      ),
+      Asset(
+        type: AssetType.video,
+        path: Images.sneaker1,
+      ),
+    ],
+    description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    sizes: [7.5, 8, 9.5, 10, 12],
+  ),
+  Sneaker(
+    id: 11,
+    shortName: 'Air-Force',
+    name: 'Air-Force-100',
+    brandName: 'Nike',
+    price: 230,
+    color: Colors.lightBlue,
+    assets: [
+      Asset(
+        type: AssetType.picture,
+        path: Images.sneaker4,
+      ),
+      Asset(
+        type: AssetType.picture,
+        path: Images.sneaker2,
+      ),
+      Asset(
+        type: AssetType.picture,
+        path: Images.sneaker1,
+      ),
+      Asset(
+        type: AssetType.video,
+        path: Images.sneaker4,
+      ),
+    ],
+    description:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+    sizes: [7.5, 8, 9.5, 10, 12],
+  ),
+  Sneaker(
+    id: 12,
     shortName: 'Blazers',
     name: 'Blazers-30',
     brandName: 'Nike',
@@ -197,7 +316,7 @@ const _moreMockSneakers = [
     assets: [
       Asset(
         type: AssetType.picture,
-        path: Images.sneaker4,
+        path: Images.sneaker1,
       ),
       Asset(
         type: AssetType.picture,
