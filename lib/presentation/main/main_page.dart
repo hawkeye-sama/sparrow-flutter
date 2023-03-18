@@ -40,7 +40,7 @@ class _MainPageState extends State<MainPage> {
           final details = sneakersDetails(sneakers);
           return Scaffold(
             resizeToAvoidBottomInset: false,
-            backgroundColor: Colors.white,
+            backgroundColor: const Color(0xFFFAFAFA),
             appBar: SneakerAppBar(
               isShowSearch: _isShowSearch,
               onSearchClose: () => setState(() => _isShowSearch = false),

@@ -13,7 +13,7 @@ class SneakersView extends StatefulWidget {
 }
 
 class _SneakersViewState extends State<SneakersView> {
-  final PageController _pageController = PageController(viewportFraction: 1);
+  final PageController _pageController = PageController(viewportFraction: 0.9);
 
   int _currentIndex = 0;
 
@@ -38,9 +38,10 @@ class _SneakersViewState extends State<SneakersView> {
   Widget build(BuildContext context) {
     return TransparentPointer(
       child: Padding(
-        padding: const EdgeInsets.symmetric(vertical: 30),
+        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 15),
         child: PageView.builder(
           controller: _pageController,
+          padEnds: false,
           scrollDirection: Axis.horizontal,
           physics: const BouncingScrollPhysics(),
           itemCount: _sneakersLength,
@@ -72,14 +73,9 @@ class _SneakersViewState extends State<SneakersView> {
                   return const SizedBox.shrink();
                 }
 
-                return AnimatedPadding(
-                  duration: const Duration(milliseconds: 300),
-                  curve: Curves.ease,
-                  padding: const EdgeInsets.only(left: 10),
-                  child: SneakerCard(
-                    sneaker: sneaker,
-                    size: size,
-                  ),
+                return SneakerCard(
+                  sneaker: sneaker,
+                  size: size,
                 );
               },
             );

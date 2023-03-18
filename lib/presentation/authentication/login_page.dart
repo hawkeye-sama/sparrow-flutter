@@ -140,12 +140,11 @@ class LoginPageState extends State<LoginPage>
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
                             const SizedBox(height: 40),
-                            Text(
+                            const Text(
                               'Welcome back!',
                               style: TextStyle(
                                 fontSize: 28,
                                 fontWeight: FontWeight.bold,
-                                color: Colors.grey[800],
                               ),
                             ),
                             const SizedBox(height: 20),

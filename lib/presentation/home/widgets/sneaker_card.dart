@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:sparrow/core/theme/mixins.dart';
 import 'package:sparrow/domain/entities/sneaker.dart';
 import 'package:sparrow/presentation/sneaker_details/sneaker_details_page.dart';
 import 'package:sparrow/presentation/widgets/dynamic_ink_well.dart';
@@ -20,13 +21,12 @@ class SneakerCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final estimatedColor = sneaker.estimatedColor;
     final cardRotateAngle = -pi / 10 * size;
 
     return Stack(
       children: [
         Padding(
-          padding: const EdgeInsets.only(left: 16),
+          padding: const EdgeInsets.only(left: 0),
           child: DynamicInkWell(
             onTap: () {
               Navigator.pushNamed(
@@ -45,29 +45,30 @@ class SneakerCard extends StatelessWidget {
                     tag: '${sneaker.id}color',
                     child: Container(
                       margin: const EdgeInsets.only(right: 36),
-                      decoration: BoxDecoration(
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(16)),
-                        color: sneaker.color,
-                      ),
-                      padding: const EdgeInsets.all(24),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: [
-                          Text(
-                            sneaker.brandName.toUpperCase(),
-                            style: TextStyle(color: estimatedColor),
+                      child: Card(
+                        elevation: 6.0,
+                        shape: const RoundedRectangleBorder(
+                          borderRadius: Mixins.radius,
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.all(24),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: [
+                              Text(
+                                sneaker.brandName.toUpperCase(),
+                              ),
+                              Padding(
+                                padding:
+                                    const EdgeInsets.symmetric(vertical: 8),
+                                child: LargeTitle(
+                                  sneaker.shortName.toUpperCase(),
+                                ),
+                              ),
+                              Text(sneaker.priceAsCurrency),
+                            ],
                           ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 8),
-                            child: LargeTitle(sneaker.shortName.toUpperCase(),
-                                color: estimatedColor),
-                          ),
-                          Text(
-                            sneaker.priceAsCurrency,
-                            style: TextStyle(color: estimatedColor),
-                          ),
-                        ],
+                        ),
                       ),
                     ),
                   ),
@@ -75,10 +76,7 @@ class SneakerCard extends StatelessWidget {
                     right: 42,
                     top: 4,
                     child: IconButton(
-                      icon: Icon(
-                        Icons.favorite_outline,
-                        color: estimatedColor,
-                      ),
+                      icon: const Icon(Icons.favorite_outline),
                       onPressed: () {},
                     ),
                   ),
@@ -86,10 +84,7 @@ class SneakerCard extends StatelessWidget {
                     right: 42,
                     bottom: 4,
                     child: IconButton(
-                      icon: Icon(
-                        Icons.trending_flat,
-                        color: estimatedColor,
-                      ),
+                      icon: const Icon(Icons.trending_flat),
                       onPressed: () {},
                     ),
                   ),
@@ -99,6 +94,7 @@ class SneakerCard extends StatelessWidget {
           ),
         ),
         Positioned(
+          top: 20,
           right: size * 200 + 40,
           child: DynamicInkWell(
             onTap: () {
@@ -115,7 +111,7 @@ class SneakerCard extends StatelessWidget {
                 duration: const Duration(milliseconds: 100),
                 child: Image.asset(
                   sneaker.image,
-                  height: 320,
+                  height: 280,
                 ),
               ),
             ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sparrow/core/theme/mixins.dart';
 import 'package:sparrow/domain/entities/sneaker.dart';
 import 'package:sparrow/presentation/sneaker_details/sneaker_details_page.dart';
 
@@ -39,7 +40,7 @@ class MoreSneakerCard extends StatelessWidget {
                   )
                 ],
                 color: Colors.white,
-                borderRadius: const BorderRadius.all(Radius.circular(8)),
+                borderRadius: Mixins.radius,
               ),
               clipBehavior: Clip.antiAliasWithSaveLayer,
               child: Column(
@@ -78,25 +79,26 @@ class MoreSneakerCard extends StatelessWidget {
               ),
             ),
             // TODO - add multiple tags like NEW, POPULAR, SALE etc and set colors according based on sneaker data
-            if (sneaker.tagValue != null)
-              Positioned(
-                left: 10,
-                child: Container(
-                  height: 88,
-                  width: 24,
-                  color: sneaker.tagColor,
-                  alignment: Alignment.center,
-                  child: RotatedBox(
-                    quarterTurns: -1,
-                    child: Text(
-                      sneaker.tagValue!,
-                      style: const TextStyle(
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                ),
-              )
+            // TODO - discuss it before implementing
+            // if (sneaker.tagValue != null)
+            //   Positioned(
+            //     left: 10,
+            //     child: Container(
+            //       height: 88,
+            //       width: 24,
+            //       color: sneaker.tagColor,
+            //       alignment: Alignment.center,
+            //       child: RotatedBox(
+            //         quarterTurns: -1,
+            //         child: Text(
+            //           sneaker.tagValue!,
+            //           style: const TextStyle(
+            //             color: Colors.white,
+            //           ),
+            //         ),
+            //       ),
+            //     ),
+            //   )
           ],
         ),
       ),

@@ -114,16 +114,13 @@ class _SneakerAppBarState extends State<SneakerAppBar>
             child: TextFormField(
               decoration: InputDecoration(
                 hintText: 'Search...',
-                hintStyle: TextStyle(
-                  color: Colors.grey[800],
-                  fontSize: 16,
-                ),
+                hintStyle: const TextStyle(fontSize: 16),
                 border: InputBorder.none,
                 contentPadding:
                     const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                prefixIcon: Icon(Icons.search, color: Colors.grey[800]),
+                prefixIcon: const Icon(Icons.search),
                 suffixIcon: IconButton(
-                  icon: Icon(Icons.close, color: Colors.grey[800]),
+                  icon: const Icon(Icons.close),
                   onPressed: () {
                     _controller.reverse();
                     setState(() {
@@ -134,10 +131,7 @@ class _SneakerAppBarState extends State<SneakerAppBar>
                 ),
               ),
               autofocus: true,
-              style: TextStyle(
-                color: Colors.grey[800],
-                fontSize: 16,
-              ),
+              style: const TextStyle(fontSize: 16),
               onChanged: (value) => widget.onSearchChanged?.call(value),
               onEditingComplete: () {
                 _controller.reverse();

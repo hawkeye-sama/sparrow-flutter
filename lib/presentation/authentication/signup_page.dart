@@ -106,12 +106,11 @@ class SignUpPageState extends State<SignUpPage> {
                         crossAxisAlignment: CrossAxisAlignment.stretch,
                         children: [
                           const SizedBox(height: 40),
-                          Text(
+                          const Text(
                             'Welcome!',
                             style: TextStyle(
                               fontSize: 28,
                               fontWeight: FontWeight.bold,
-                              color: Colors.grey[800],
                             ),
                           ),
                           const SizedBox(height: 20),

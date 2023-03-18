@@ -4,20 +4,25 @@ class CustomThemeData {
   static const Color primaryPurple = Color(0xFF6C63FF);
   static const Color primaryRed = Color(0xFFFF7F7E);
   static const Color primaryGreen = Color(0xFF6FB98F);
+  static Color fontColor = Colors.grey[800]!;
 
   static ThemeData light = ThemeData.light().copyWith(
     textTheme: ThemeData.light().textTheme.apply(
           fontFamily: 'JosefinSans',
+          bodyColor: fontColor,
+          displayColor: fontColor,
         ),
     primaryTextTheme: ThemeData.light().textTheme.apply(
           fontFamily: 'JosefinSans',
+          bodyColor: fontColor,
+          displayColor: fontColor,
         ),
     primaryColor: primaryPurple,
-    appBarTheme: const AppBarTheme(
+    appBarTheme: AppBarTheme(
       titleTextStyle: TextStyle(
         fontSize: 36,
         fontWeight: FontWeight.w700,
-        color: Colors.black,
+        color: fontColor,
         fontFamily: 'JosefinSans',
       ),
       backgroundColor: Colors.transparent,
