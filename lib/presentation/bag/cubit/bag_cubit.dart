@@ -1,15 +1,14 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:sparrow/domain/entities/bag_sneaker.dart';
 import 'package:sparrow/domain/entities/sneaker.dart';
-// ignore: depend_on_referenced_packages
 import 'package:collection/collection.dart';
 
 class BagCubit extends Cubit<List<BagSneaker>> {
   BagCubit() : super([]);
 
-  final _latestSneakers = <BagSneaker>[];
+  final List<BagSneaker> _latestSneakers = [];
 
-  List<BagSneaker> latestSneakers() {
+  List<BagSneaker> getLatestSneakers() {
     var result = <BagSneaker>[];
 
     if (_latestSneakers.isNotEmpty) {
@@ -22,7 +21,7 @@ class BagCubit extends Cubit<List<BagSneaker>> {
     return result;
   }
 
-  void add(Sneaker sneaker) {
+  void addToBag(Sneaker sneaker, {int count = 1}) {
     final bagSneaker = state.firstWhereOrNull(
       (element) => element.id == sneaker.id,
     );
@@ -32,31 +31,57 @@ class BagCubit extends Cubit<List<BagSneaker>> {
         bagSneaker.count += 1;
       }
     } else {
-      _latestSneakers.add(
+      state.add(
         BagSneaker(
           id: sneaker.id,
-          count: 1,
+          count: count,
           name: sneaker.name,
           image: sneaker.image,
           price: sneaker.price,
         ),
       );
     }
+
+    emit(List<BagSneaker>.from(state));
   }
 
-  void addOne(int id) {
+  void addBagSneakerToBag(BagSneaker bagSneaker, {int count = 1}) {
+    final sneaker = state.firstWhereOrNull(
+      (element) => element.id == bagSneaker.id,
+    );
+
+    if (sneaker != null) {
+      if (sneaker.count < 20) {
+        sneaker.count += 1;
+      }
+    } else {
+      state.add(
+        BagSneaker(
+          id: bagSneaker.id,
+          count: count,
+          name: bagSneaker.name,
+          image: bagSneaker.image,
+          price: bagSneaker.price,
+        ),
+      );
+    }
+
+    emit(List<BagSneaker>.from(state));
+  }
+
+  void addOneToBag(int id) {
     final bagSneaker = state.firstWhereOrNull(
       (element) => element.id == id,
     );
 
     if (bagSneaker != null && bagSneaker.count < 20) {
       bagSneaker.count += 1;
-
-      emit(List<BagSneaker>.from(state));
     }
+
+    emit(List<BagSneaker>.from(state));
   }
 
-  void removeOne(int id) {
+  void removeOneFromBag(int id) {
     final bagSneaker = state.firstWhereOrNull(
       (element) => element.id == id,
     );
@@ -67,6 +92,18 @@ class BagCubit extends Cubit<List<BagSneaker>> {
       } else {
         bagSneaker.count -= 1;
       }
+    }
+
+    emit(List<BagSneaker>.from(state));
+  }
+
+  void removeFromBag(int id) {
+    final bagSneaker = state.firstWhereOrNull(
+      (element) => element.id == id,
+    );
+
+    if (bagSneaker != null) {
+      state.remove(bagSneaker);
     }
 
     emit(List<BagSneaker>.from(state));

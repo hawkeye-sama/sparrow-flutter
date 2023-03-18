@@ -18,7 +18,7 @@ const mockSneakers = Sneakers(
           name: 'Air-Zoom-20',
           brandName: 'Nike',
           price: 130,
-          color: Colors.purple,
+          color: Color(0xFF6C63FF),
           assets: [
             Asset(
               type: AssetType.picture,

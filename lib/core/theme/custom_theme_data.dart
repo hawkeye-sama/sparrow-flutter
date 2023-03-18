@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class CustomThemeData {
+  static const Color primaryPurple = Color(0xFF6C63FF);
+  static const Color primaryRed = Color(0xFFFF7F7E);
+  static const Color primaryGreen = Color(0xFF6FB98F);
+
   static ThemeData light = ThemeData.light().copyWith(
     textTheme: ThemeData.light().textTheme.apply(
           fontFamily: 'JosefinSans',
@@ -8,7 +12,7 @@ class CustomThemeData {
     primaryTextTheme: ThemeData.light().textTheme.apply(
           fontFamily: 'JosefinSans',
         ),
-    primaryColor: Colors.purple,
+    primaryColor: primaryPurple,
     appBarTheme: const AppBarTheme(
       titleTextStyle: TextStyle(
         fontSize: 36,
@@ -28,7 +32,7 @@ class CustomThemeData {
       type: BottomNavigationBarType.fixed,
       selectedIconTheme: IconThemeData(
         size: 30,
-        color: Colors.purple,
+        color: primaryPurple,
       ),
       unselectedIconTheme: IconThemeData(
         size: 30,
@@ -37,7 +41,7 @@ class CustomThemeData {
     ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        backgroundColor: Colors.purple,
+        backgroundColor: primaryPurple,
         foregroundColor: Colors.white,
         minimumSize: const Size.fromHeight(48),
       ),
@@ -53,5 +57,6 @@ class CustomThemeData {
         foregroundColor: Colors.black,
       ),
     ),
+    indicatorColor: primaryPurple,
   );
 }

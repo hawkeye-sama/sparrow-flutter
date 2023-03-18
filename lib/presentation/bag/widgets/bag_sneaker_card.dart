@@ -7,10 +7,10 @@ class BagSneakerCard extends StatelessWidget {
   const BagSneakerCard({
     required this.bagSneaker,
     required this.animation,
+    Key? key,
     this.onDelete,
     this.onAdd,
-    super.key,
-  });
+  }) : super(key: key);
 
   final BagSneaker bagSneaker;
   final Animation<double> animation;

@@ -11,6 +11,7 @@ class CustomTabBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
     return BlocBuilder<BrandCubit, int>(
       builder: (context, activeBrandIndex) {
         return Row(
@@ -40,13 +41,14 @@ class CustomTabBar extends StatelessWidget {
                                 height: 50,
                                 decoration: BoxDecoration(
                                   color: isActive
-                                      ? Colors.purple.withOpacity(0.9)
+                                      ? theme.primaryColor.withOpacity(0.9)
                                       : Colors.white,
                                   borderRadius: Mixins.radius,
                                   boxShadow: isActive
                                       ? [
                                           BoxShadow(
-                                            color: Colors.purple.withOpacity(0.3),
+                                            color: theme.primaryColor
+                                                .withOpacity(0.3),
                                             spreadRadius: 2,
                                             blurRadius: 6,
                                             offset: const Offset(0, 3),

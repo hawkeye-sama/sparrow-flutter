@@ -30,7 +30,7 @@ class SignUpPageState extends State<SignUpPage> {
                   end: Alignment.bottomRight,
                   colors: [
                     Colors.deepPurpleAccent.shade200,
-                    Colors.purple.shade800,
+                    theme.primaryColor,
                   ],
                 ),
               ),

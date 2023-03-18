@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:sparrow/core/theme/custom_theme_data.dart';
+import 'package:sparrow/core/theme/mixins.dart';
 import 'package:sparrow/domain/entities/bag_sneaker.dart';
 import 'package:sparrow/presentation/bag/cubit/bag_cubit.dart';
 import 'package:sparrow/presentation/bag/widgets/bag_sneaker_card.dart';
 import 'package:sparrow/presentation/widgets/empty_page.dart';
-// ignore: depend_on_referenced_packages
 import 'package:collection/collection.dart';
 
 class BagList extends StatefulWidget {
@@ -29,7 +30,7 @@ class _BagListState extends State<BagList> {
     super.initState();
     _sneakers = List.from(widget.sneakers);
     WidgetsBinding.instance.addPostFrameCallback((_) async {
-      final latestSneakers = context.read<BagCubit>().latestSneakers();
+      final latestSneakers = context.read<BagCubit>().getLatestSneakers();
 
       for (var sneaker in latestSneakers.reversed) {
         await Future.delayed(const Duration(milliseconds: 300), () {
@@ -46,7 +47,7 @@ class _BagListState extends State<BagList> {
     if (widget.sneakers.isEmpty) {
       return const EmptyPage(
         icon: Icons.shopping_cart_outlined,
-        title: 'No shoes added',
+        title: 'No items added',
       );
     }
 
@@ -61,10 +62,30 @@ class _BagListState extends State<BagList> {
           bagSneaker,
           animation,
           onAdd: () {
-            context.read<BagCubit>().addOne(bagSneaker.id);
+            context.read<BagCubit>().addOneToBag(bagSneaker.id);
+          },
+          onDeleteMany: () {
+            context.read<BagCubit>().removeFromBag(bagSneaker.id);
+
+            final sneaker = widget.sneakers.firstWhereOrNull(
+              (element) => element.id == bagSneaker.id,
+            );
+
+            if (sneaker == null) {
+              _sneakers.removeAt(index);
+
+              AnimatedList.of(context).removeItem(index,
+                  (context, animation) => _buildItem(bagSneaker, animation));
+            }
+
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(
+                content: Text('Deleted an item from bag'),
+              ),
+            );
           },
           onDelete: () {
-            context.read<BagCubit>().removeOne(bagSneaker.id);
+            context.read<BagCubit>().removeOneFromBag(bagSneaker.id);
 
             final sneaker = widget.sneakers.firstWhereOrNull(
               (element) => element.id == bagSneaker.id,
@@ -77,6 +98,12 @@ class _BagListState extends State<BagList> {
                 index,
                 (context, animation) => _buildItem(bagSneaker, animation),
               );
+
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text('Deleted an item from bag'),
+                ),
+              );
             }
           },
         );
@@ -88,18 +115,58 @@ class _BagListState extends State<BagList> {
     BagSneaker bagSneaker,
     Animation<double> animation, {
     Function()? onDelete,
+    Function()? onDeleteMany,
     Function()? onAdd,
   }) {
     return SizeTransition(
       sizeFactor: animation,
       child: FadeTransition(
         opacity: animation,
-        child: BagSneakerCard(
-          key: Key('${bagSneaker.id}item'),
-          bagSneaker: bagSneaker,
-          animation: animation,
-          onDelete: onDelete,
-          onAdd: onAdd,
+        child: Container(
+          margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+          child: Dismissible(
+            key: UniqueKey(),
+            background: Container(
+              decoration: const BoxDecoration(
+                borderRadius: Mixins.radius,
+                color: CustomThemeData.primaryRed,
+              ),
+              child: const Align(
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                  padding: EdgeInsets.only(left: 16.0),
+                  child: Icon(Icons.delete, color: Colors.white),
+                ),
+              ),
+            ),
+            secondaryBackground: Container(
+              decoration: const BoxDecoration(
+                borderRadius: Mixins.radius,
+                color: CustomThemeData.primaryRed,
+              ),
+              child: const Align(
+                alignment: Alignment.centerRight,
+                child: Padding(
+                  padding: EdgeInsets.only(right: 16.0),
+                  child: Icon(Icons.delete, color: Colors.white),
+                ),
+              ),
+            ),
+            onDismissed: (_) => onDeleteMany?.call(),
+            child: Card(
+              elevation: 6.0,
+              shape: const RoundedRectangleBorder(
+                borderRadius: Mixins.radius,
+              ),
+              child: BagSneakerCard(
+                key: Key('${bagSneaker.id}item'),
+                bagSneaker: bagSneaker,
+                animation: animation,
+                onDelete: onDelete,
+                onAdd: onAdd,
+              ),
+            ),
+          ),
         ),
       ),
     );

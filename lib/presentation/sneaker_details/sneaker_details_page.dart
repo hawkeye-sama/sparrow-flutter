@@ -88,7 +88,8 @@ class _SneakerDetailsPageState extends State<SneakerDetailsPage> {
               visible: _visible,
               duration: _duration,
               child: PrimaryButton(
-                onPressed: () => context.read<BagCubit>().add(widget.sneaker),
+                onPressed: () =>
+                    context.read<BagCubit>().addToBag(widget.sneaker),
                 title: 'Add to bag',
               ),
             ),
